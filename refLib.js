@@ -137,13 +137,13 @@ function attractedByChannel(){
 
 function getRefLink(botName, prefix){
   if(!prefix){
-    prefix = "user"
+    prefix = "user.telegramid"
   }else{
     Bot.setProperty("REFLIB_refList_" + "link_prefix", prefix, 'string');
   }
 
   let aff_link='https://t.me/' + botName + 
-    '?start=' + prefix + user.id;
+    '?start=' + prefix ;
 
   let userKey = 'user' + user.id;
   user.chatId = chat.chatid;
