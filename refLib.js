@@ -59,7 +59,7 @@ function isAlreadyAttracted(){
 }
 
 function trackRef(){
-  let prefix = 'user.telegramid'
+  let prefix = 'user'
 
   let uprefix = Bot.getProperty("REFLIB_refList_link_prefix");
   if(uprefix){ prefix = uprefix  }
@@ -137,7 +137,7 @@ function attractedByChannel(){
 
 function getRefLink(botName, prefix){
   if(!prefix){
-    prefix = "User.telegramid"
+    prefix = "user"
   }else{
     Bot.setProperty("REFLIB_refList_" + "link_prefix", prefix, 'string');
   }
@@ -173,7 +173,7 @@ publish({
     track: track,
     refList:{
       get: getRefList,
-      clear: clearRefList
+      clear:efList
     },
     attractedByUser: attractedByUser,
     attractedByChannel: attractedByChannel
